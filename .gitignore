@@ -1,4 +1,5 @@
 dataset/
+dataset-resnet/
 dataset-sample/
 dataset-augmented/
 .ipynb_checkpoints/
