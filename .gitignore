@@ -2,5 +2,6 @@ dataset/
 dataset-resnet/
 dataset-sample/
 dataset-augmented/
+dataset-sample-flat/
 .ipynb_checkpoints/
 GroundTruth.xlsx
