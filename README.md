@@ -22,6 +22,9 @@ The following notebooks are the models for training:
 root
 ├── base-cnn.ipynb
 ├── lb-fcnn.ipynb
+├── lb-fcnn-with-attention.ipynb
+├── lb-fcnn-with-feature-fusion.ipynb
+├── lb-fcnn-with-feature-fusion-and-attention.ipynb
 ├── mobilenet-pretrained-frozen.ipynb
 ├── mobilenet-pretrained-unfrozen.ipynb
 ├── mobilenet-trained-from-scratch.ipynb
