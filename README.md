@@ -10,10 +10,8 @@
 root
 ├── .gitignore  
 ├── README.md  
-├── dataset  
-│   ├── test 
-│   ├── train
-│   ├── val  
-│   └── GroundTruth.xlsx
+├── dataset-sample-flat
+├── dataset-augmented-flat
+├── base-cnn.ipynb
 └── ...
 ```
