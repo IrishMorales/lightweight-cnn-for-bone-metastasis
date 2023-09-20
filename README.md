@@ -35,3 +35,5 @@ When training a model, please do the following:
 3. Change `k_folds = 3` to `k_folds = 10`
 4. Change `epochs = 2` to `epochs = 100`
 5. Run the model again. This will run the model on the full dataset, amount of folds, and amount of epochs.
+
+**Note**: If using CUDA and you have already run the notebook once then try to run again, it may error on the cell with `summary(model, (3, 646, 220))`. To fix this, simply restart the kernel and run all cells to reset the tensor state from the previous run.
