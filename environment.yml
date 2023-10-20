@@ -7,6 +7,7 @@ dependencies:
   - matplotlib==3.6.2=py310haa95532_0
   - torchvision==0.13.1=cpu_py310h378ed51_0
   - jupyter
+  - torchstat
   - pillow==9.3.0=py310hd77b12b_2
   - numpy==1.23.5=py310h60c9a35_0
   - python==3.10.9=h966fe2a_0
