@@ -1,4 +1,5 @@
 dataset*
 .ipynb_checkpoints/
 archived/
+lb-fcnn-tests/data/*
 GroundTruth.xlsx
