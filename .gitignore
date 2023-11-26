@@ -3,3 +3,4 @@ dataset*
 archived/
 lb-fcnn-tests/data/*
 GroundTruth.xlsx
+*.pyc
