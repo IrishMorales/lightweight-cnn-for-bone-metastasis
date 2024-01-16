@@ -4,3 +4,6 @@ archived/
 lb-fcnn-tests/data/*
 GroundTruth.xlsx
 *.pyc
+
+# Training checkpoints
+*.pt
