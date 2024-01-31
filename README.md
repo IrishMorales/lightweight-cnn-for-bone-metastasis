@@ -1,20 +1,37 @@
 # Bone Metastasis LB-FCNN
+Lightweight neural network for binary classification of cancer metastasis in bone scan images using PyTorch. Code repository for the study entitled "A Lightweight Convolutional Neural Network for Detection of Osseous Metastasis using Feature Fusion and Attention Strategies".
 
-### If setting up the project for the first time on your local machine
-1. Open Anaconda Prompt and cd to the repo
-2. Run `conda env create -f environment.yml` to create virtual environment from the environment.yml file
-3. Run `conda activate conv_env` to activate the virtual environment
-4. Run `jupyter notebook` to open Jupyter Notebook
-5. Unzip and place the dataset in your folder as follows:
+### [Important]
+This study is currently ongoing. Documentation and notebooks may be incomplete at this point in time.
+
+---
+
+### Setup
+1. Create your virtual environment using `environment.yml`.
+2. Unzip and place your dataset as specified in the Dataset section below.
+
+---
+
+### Dataset
+For privacy reasons, the dataset used in this study is limited to research collaborators. To use the notebooks here with your own dataset, unzip and place your dataset/s in your folder as follows:
 ```
 root
 ├── .gitignore  
 ├── README.md  
-├── dataset-sample-flat
-├── dataset-augmented-flat
+├── dataset-sample
+├── dataset
 ├── base-cnn.ipynb
 └── ...
 ```
+Your dataset should be a folder containing .tif images, where each .tif image corresponds to one bone scan. Each image filename should follow the format `XXXX-Y-Z`: 
+- `XXXX` corresponds to the image index*
+- `Y` corresponds to either 0 or 1, with 0 indicating no metastasis and 1 indicating with metastasis
+- `Z` corresponds to either A or P, with A indicating anterior bone scan and P indicating posterior bone scan*
+*These parts are ignored in the code, but are helpful for holding additional information about specific images.
+
+Alternatively, if you would like to request access to the dataset used in this study, please contact alive.sose@ateneo.edu.
+
+---
 
 ### Training Notes
 The following notebooks are the models for training:
@@ -33,10 +50,10 @@ root
 └── resnet-trained-from-scratch.ipynb
 ```
 When training a model, please do the following:
-1. Run it first and see if it runs to the very end. It is initially set to run on sample data `(dataset-sample-flat)`
-2. If it runs to the very end, change `data_dir = r"dataset-sample-flat"` to `data_dir = r"dataset-augmented-flat"`
-3. Change `k_folds = 3` to `k_folds = 10`
-4. Change `epochs = 2` to `epochs = 100`
-5. Run the model again. This will run the model on the full dataset, amount of folds, and amount of epochs.
+1. Change `data_dir = r"dataset-sample-flat"` to the name of your dataset. It is recommended to have two datasets, one being your actual dataset and another being a smaller sample that you can use to first test if the notebook is set up correctly on your machine.
+2. Run the notebook on your sample dataset and see if it runs to the very end.
+3. If it runs to the very end, change `data_dir = r"dataset-sample-flat"` to the filename of your actual dataset (ex. `data_dir = r"dataset-augmented-flat"`)
+4. Change hyperparameters, number of folds for crossfold validation (`k_folds = 3`), and number of epochs (`epochs = 2`) as you see fit.
+5. Run the model on your full dataset.
 
-**Note**: If using CUDA and you have already run the notebook once then try to run again, it may error on the cell with `summary(model, (3, 646, 220))`. To fix this, simply restart the kernel and run all cells to reset the tensor state from the previous run.
+**Note**: If using CUDA and you have already run the notebook once then try to run again, it may error on the cell with `summary(model, (C, H, W))`. To fix this, simply restart the kernel and run all cells to reset the tensor state from the previous run.
