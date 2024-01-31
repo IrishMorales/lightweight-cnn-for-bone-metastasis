@@ -2,7 +2,20 @@
 Lightweight neural network for binary classification of cancer metastasis in bone scan images using PyTorch. Code repository for the study entitled "A Lightweight Convolutional Neural Network for Detection of Osseous Metastasis using Feature Fusion and Attention Strategies".
 
 ### [Important]
-This study is currently ongoing. Documentation and notebooks may be incomplete at this point in time.
+This study is currently ongoing. Documentation, notebooks, and model results may be incomplete at this point in time.
+
+### MobileLookNet: A Novel Lightweight CNN
+This study introduces a novel lightweight architecture called MobileLookNet, which achieves better performance than existing state-of-the-art CNNs despite having fewer FLOPs and parameters. MobileLookNet exhibits ~1/3 of MobileNet's FLOPs, ~1/30 of ResNet's FLOPS, ~1/10 of MobileNet's parameters, and ~1/100 of ResNet's parameters. MobileLookNet surpasses MobileNet and ResNet in accuracy, precision, F1-score, and sensitivity.
+
+---
+
+### Models
+This repository contains the following:
+- MobileLookNet - variations of MobileLookNet with feature fusion and attention strategies
+- Base CNN - A base/vanilla CNN proposed in [Analysis of Batch Size in the Assessment of Bone Metastasis from Bone Scans in Various Convolutional Neural Networks](https://link.springer.com/chapter/10.1007/978-981-99-3068-5_20). Compared against the performance and computational load of MobileLookNet.
+- LB-FCNN - A lightweight CNN proposed in . Compared against the performance and computational load of MobileLookNet.
+- MobileNetv2 - A lightweight state-of-the-art CNN developed for mobile systems proposed in [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381). Compared against the performance and computational load of MobileLookNet.
+- ResNet - A residual neural network proposed in [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385). Compared against the performance and computational load of MobileLookNet.
 
 ---
 
@@ -33,23 +46,8 @@ Alternatively, if you would like to request access to the dataset used in this s
 
 ---
 
-### Training Notes
-The following notebooks are the models for training:
-```
-root
-├── base-cnn.ipynb
-├── lb-fcnn.ipynb
-├── lb-fcnn-with-attention.ipynb
-├── lb-fcnn-with-feature-fusion.ipynb
-├── lb-fcnn-with-feature-fusion-and-attention.ipynb
-├── mobilenet-pretrained-frozen.ipynb
-├── mobilenet-pretrained-unfrozen.ipynb
-├── mobilenet-trained-from-scratch.ipynb
-├── resnet-pretrained-frozen.ipynb
-├── resnet-pretrained-unfrozen.ipynb
-└── resnet-trained-from-scratch.ipynb
-```
-When training a model, please do the following:
+### Steps for Training
+When training a model for the first time, do the following:
 1. Change `data_dir = r"dataset-sample-flat"` to the name of your dataset. It is recommended to have two datasets, one being your actual dataset and another being a smaller sample that you can use to first test if the notebook is set up correctly on your machine.
 2. Run the notebook on your sample dataset and see if it runs to the very end.
 3. If it runs to the very end, change `data_dir = r"dataset-sample-flat"` to the filename of your actual dataset (ex. `data_dir = r"dataset-augmented-flat"`)
