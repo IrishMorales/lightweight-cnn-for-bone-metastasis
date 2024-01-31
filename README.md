@@ -1,4 +1,4 @@
-# Bone Metastasis LB-FCNN
+# Lightweight Neural Network for Bone Metastasis Detection
 Lightweight neural network for binary classification of cancer metastasis in bone scan images using PyTorch. Code repository for the study entitled "A Lightweight Convolutional Neural Network for Detection of Osseous Metastasis using Feature Fusion and Attention Strategies".
 
 ### [Important]
