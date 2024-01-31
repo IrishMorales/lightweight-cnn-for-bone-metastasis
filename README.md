@@ -2,7 +2,7 @@
 Lightweight neural network for binary classification of cancer metastasis in bone scan images using PyTorch. Code repository for the study entitled "A Lightweight Convolutional Neural Network for Detection of Osseous Metastasis using Feature Fusion and Attention Strategies".
 
 ### [Important]
-This study is currently ongoing. Documentation and notebooks may be incomplete at this point in time.
+This study is currently ongoing. Documentation, notebooks, and model results may be incomplete at this point in time.
 
 ### MobileLookNet: A Novel Lightweight CNN
 This study introduces a novel lightweight architecture called MobileLookNet, which achieves better performance than existing state-of-the-art CNNs despite having fewer FLOPs and parameters. MobileLookNet exhibits ~1/3 of MobileNet's FLOPs, ~1/30 of ResNet's FLOPS, ~1/10 of MobileNet's parameters, and ~1/100 of ResNet's parameters. MobileLookNet surpasses MobileNet and ResNet in accuracy, precision, F1-score, and sensitivity.
