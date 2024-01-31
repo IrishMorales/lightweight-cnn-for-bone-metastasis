@@ -5,9 +5,11 @@ Lightweight neural network for binary classification of cancer metastasis in bon
 This study is currently ongoing. Documentation, notebooks, and model results may be incomplete at this point in time.
 
 ### MobileLookNet: A Novel Lightweight CNN
-This study introduces a novel lightweight architecture called MobileLookNet, which achieves better performance than existing state-of-the-art CNNs despite having fewer FLOPs and parameters. MobileLookNet exhibits ~1/3 of MobileNet's FLOPs, ~1/30 of ResNet's FLOPS, ~1/10 of MobileNet's parameters, and ~1/100 of ResNet's parameters. MobileLookNet surpasses MobileNet and ResNet in accuracy, precision, F1-score, and sensitivity.
+This study introduces a novel lightweight architecture called MobileLookNet, which achieves better performance than existing state-of-the-art CNNs despite having fewer FLOPs and parameters. MobileLookNet exhibits ~1/3 of MobileNet's FLOPs, ~1/30 of ResNet's FLOPS, ~1/10 of MobileNet's parameters, and ~1/100 of ResNet's parameters. MobileLookNet surpasses MobileNet and ResNet in accuracy, precision, F1-score, and sensitivity*.
 
 MobileLookNet is applied to cancer detection through bone metastasis in the hopes of assisting understaffed and underfunded healthcare facilties, which often lack the computing power needed to run existing state-of-the-art models.
+
+*Exact figures and model architecture will be added to this README at a later time.
 
 ---
 
