@@ -1,12 +1,12 @@
 # Lightweight Neural Network for Bone Metastasis Detection
 Lightweight neural network for binary classification of cancer metastasis in bone scan images using PyTorch. Code repository for the study entitled "A Lightweight Convolutional Neural Network for Detection of Osseous Metastasis using Feature Fusion and Attention Strategies". Presented at CVIPPR 2024.
 
-### MobileLookNet: A Novel Lightweight CNN
-This study introduces a novel lightweight architecture called MobileLookNet, which achieves better performance than existing state-of-the-art CNNs despite having fewer FLOPs and parameters. MobileLookNet exhibits ~1/3 of MobileNet's FLOPs, ~1/30 of ResNet's FLOPS, ~1/10 of MobileNet's parameters, and ~1/100 of ResNet's parameters. MobileLookNet surpasses MobileNet and ResNet in accuracy, precision, F1-score, and sensitivity*.
+### MobileLookNet
+MobileLookNet is a novel lightweight CNN for osseous metastasis detection in bone scintigrams on resource-constrained devices. The top-performing MobileLookNet variant exhibits superior accuracy, precision, sensitivity, and F1 score to ResNet while achieving a 95.54% reduction in parameters. This is achieved through employing depthwise separable convolutions in parallel, utilizing inverted residuals, and integrating low-level and high-level features, allowing the model to capture diverse levels of abstraction and extract more individually expressive features. MobileLookNet also outperforms traditional bone scintigraphy methods and state-of-the-art networks in metastasis detection while requiring significantly fewer floating-point operations (FLOPs) and parameters.
 
 MobileLookNet is applied to cancer detection through bone metastasis in the hopes of assisting understaffed and underfunded healthcare facilties, which often lack the computing power needed to run existing state-of-the-art models.
 
-*Exact figures and model architecture will be added to this README at a later time.
+![Resultst](https://github.com/IrishMorales/lightweight-cnn-for-bone-metastasis/raw/main/results/all_scatter.svg "Results")
 
 ---
 
@@ -14,7 +14,7 @@ MobileLookNet is applied to cancer detection through bone metastasis in the hope
 This repository contains the following:
 - MobileLookNet - variations of MobileLookNet with feature fusion and attention strategies
 - Base CNN - A base/vanilla CNN proposed in [Analysis of Batch Size in the Assessment of Bone Metastasis from Bone Scans in Various Convolutional Neural Networks](https://link.springer.com/chapter/10.1007/978-981-99-3068-5_20). Compared against the performance and computational load of MobileLookNet.
-- LB-FCNN - A lightweight CNN proposed in . Compared against the performance and computational load of MobileLookNet.
+- LB-FCNN - (Outdated) A lightweight CNN containing early, outdated versions of the model. Kept for documentation.
 - MobileNetv2 - A lightweight state-of-the-art CNN developed for mobile systems proposed in [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381). Compared against the performance and computational load of MobileLookNet.
 - ResNet - A residual neural network proposed in [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385). Compared against the performance and computational load of MobileLookNet.
 
